@@ -183,7 +183,7 @@
                                             <fragment content="Swipe up to share">
                                                 <attributes>
                                                     <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" metaFont="system" size="16"/>
+                                                    <font key="NSFont" size="20" name="Delm-Medium"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -194,7 +194,7 @@
                                                 <fragment content="Swipe left to share">
                                                     <attributes>
                                                         <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <font key="NSFont" metaFont="system" size="16"/>
+                                                        <font key="NSFont" size="20" name="Delm-Medium"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
@@ -226,13 +226,17 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OsU-D2-Vjb" secondAttribute="bottom" constant="180" id="Ufe-oA-Spv">
                                 <variation key="heightClass=compact" constant="8"/>
                             </constraint>
+                            <constraint firstItem="OsU-D2-Vjb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jIr-VY-l6H"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eFn-UI-1BW" secondAttribute="bottom" constant="40" id="veh-5D-mJ3">
                                 <variation key="heightClass=compact" constant="14"/>
                             </constraint>
+                            <constraint firstItem="OsU-D2-Vjb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wS3-hW-awx"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="Gum-7E-Sgo"/>
                                 <exclude reference="UY2-9X-Jx4"/>
+                                <exclude reference="wS3-hW-awx"/>
                             </mask>
                         </variation>
                     </view>

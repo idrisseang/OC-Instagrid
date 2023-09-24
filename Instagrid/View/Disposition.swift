@@ -15,7 +15,11 @@ class Disposition {
         self.view.subviews[0] as! UIStackView /// The main stackView contained within the layout, used to store the two sub-StackViews
     }
     var stackViews: [UIStackView] {
-        self.mainStackView.arrangedSubviews as! [UIStackView] /// The two previously mentioned stackViews
+        if let stacks = self.mainStackView.arrangedSubviews as? [UIStackView] {
+            return stacks
+        } else {
+            return []
+        } /// The two previously mentioned stackViews
     }
     var delegate: DispositionDelegate? /// Delegate of the Disposition class
     
@@ -25,12 +29,6 @@ class Disposition {
     
     init(view: UIView) {
         self.view = view /// Links the 'view' attribute of the Disposition class with the 'mainView' in the ViewController
-    }
-    
-    /// Function called when the user taps the photo frame
-    /// - Parameter sender: Index of the photo frame touched by the user, used to identify which frame to assign the selected photo
-    func userDidTapPhotoView(_ sender: UIButton) {
-        delegate?.didTouchPhotoView(sender) /// Calls the 'didTouchPhotoView' method of the controller, which is the delegate
     }
     
     /// Function that returns the initial layout with 4 squares

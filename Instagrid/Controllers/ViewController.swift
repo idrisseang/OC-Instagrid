@@ -59,22 +59,6 @@ class ViewController: UIViewController {
     /// Function called when the iPhone's orientation changes
     @objc func orientationDidChange() {
         self.setSwipeGesture()
-        changeTextLabel(deviceOrientation: self.currentDeviceOrientation)
-    }
-    
-    
-    /// Function that changes the text based on the iPhone's orientation
-    /// - Parameter deviceOrientation: Current device orientation
-    private func changeTextLabel(deviceOrientation: UIDeviceOrientation) {
-        self.label.font = UIFont(name: "Delm-Medium", size: 20)
-        switch deviceOrientation {
-        case .portrait:
-            self.label.text = "Swipe up to share"
-        case .landscapeRight:
-            self.label.text = "Swipe left to share"
-        default:
-            break
-        }
     }
     
     //MARK: - PhotoViews Touch
